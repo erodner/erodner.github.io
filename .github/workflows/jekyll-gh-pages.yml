@@ -50,6 +50,7 @@ jobs:
           python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../publications.html -p ../   
       - name: Cleanup
         run: |
+          pwd
           ls -l
           rm -rf bibworld
           rm -rf publications
@@ -64,7 +65,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./webpage
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
