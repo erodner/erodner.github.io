@@ -1,15 +1,17 @@
-    .bibtitle { font-weight: normal; padding:2px; font-family: 'PT Sans Narrow', sans-serif; font-size: 1rem; font-weight: bold; }
-    .bibauthor { font-style: italic; padding: 2px; font-family: 'PT Serif', serif; }
-    .bibvenue { font-style: bold; padding:2px; font-family: 'PT Serif', serif; }
-    .bibpages { font-style: bold; padding:2px; font-family: 'PT Serif', serif; }
-    .bibyear { font-style: italic; padding:2px; font-family: 'PT Serif', serif; }
+    .bibtitle { font-weight: normal; padding:2px; font-family: inherit; font-size: 1rem; font-weight: bold; }
+    .bibauthor { font-style: italic; padding: 2px; font-family: inherit; }
+    .bibvenue { font-style: bold; padding:2px; font-family: inherit; }
+    .bibpages { font-style: bold; padding:2px; font-family: inherit; }
+    .bibyear { font-style: italic; padding:2px; font-family: inherit; }
     .note { font-style: italic; padding:2px }
     .awardnote { font-weight: bold; color:rgba(165, 27, 27, 1); padding:2px }
-    .bibabstract { display: none; color:rgba(0,0,0,1); margin-top:8px; font-style:italic; font-family: 'PT Serif', serif; }
-    .abstractlink { font-style: italic; border-color: black; text-decoration: underline; cursor: pointer; font-family: 'PT Serif', serif; }
-    .pdflink { font-style: italic; font-family: 'PT Serif', serif; }
+    .bibabstract { display: none; color:rgba(0,0,0,1); margin-top:8px; font-style:italic; font-family: inherit; }
+    .abstractlink { font-style: italic; border-color: black; text-decoration: underline; cursor: pointer; font-family: inherit; }
+    .bibbibtex { display:none; white-space:pre-wrap; color:rgba(0,0,0,1); margin-top:8px; font-style:italic; font-family: "Courier New"; }
+    .bibtexlink { font-style: italic; border-color: black; text-decoration: underline; cursor: pointer; font-family: inherit; }
+    .pdflink { font-style: italic; font-family: inherit; }
     .vspace { margin-top:0.3em }
     .block blockquote{border-color:rgba(0,0,0,0)}
-    .paperblock{padding:5px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px; background-color:rgba(0,0,0,0); clear:both; overflow:hidden; vertical-align:middle; font-family: 'PT Serif', serif; width: 100%}
+    .paperblock{padding:5px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px; background-color:rgba(0,0,0,0); clear:both; overflow:hidden; vertical-align:middle; font-family: inherit; width: 100%}
     .teaserimg{float:left; padding: 5px}
-    h2 { font-family: 'PT Sans Narrow', serif; font-size:24pt; font-weight: bold; }
+    h2 { font-family: inherit, serif; font-size:24pt; font-weight: bold; }

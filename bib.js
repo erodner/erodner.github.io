@@ -1,4 +1,4 @@
-function abstractclick(element)
+function fieldclick(element)
 {
     abox = document.getElementById(element);
     
