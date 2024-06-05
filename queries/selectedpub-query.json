@@ -1,5 +1,5 @@
 {
     "year":"(2018|2019|2020|2021|2022|2023|2024|2025)",
     "author": "Rodner",
-    "venue": "(Pattern Analysis and Machine Intelligence|Head and Neck|Histopathology|Scientific Reports|BMVC|arXiv|ICCV|CVPR|NIPS|ECCV|IJCV|Neck|JMLR|ICML|GCPR|ACCV|PAMI|TPAMI)"
+    "venue": "(Pattern Analysis and Machine Intelligence|Head and Neck|Histopathology|Scientific Reports|BMVC|arXiv|ICCV|CVPR|NIPS|ECCV|IJCV|Neck|JMLR|ICML|GCPR|ACCV|PAMI|TPAMI|ECML)"
 }
