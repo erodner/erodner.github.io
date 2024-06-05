@@ -42,6 +42,8 @@ jobs:
           ls -ld bibworld
           ls -ld publications
       - name: Generate HTML for publications
+        run: |
+          python --version
 
   # Build job
   build:
