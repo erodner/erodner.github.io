@@ -22,6 +22,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Generating publications
+  pubgen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone publications
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          owner: erodner
+          repository: publications
+      - name: Clone bibworld
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          owner: erodner
+          repository: bibworld
+          branch: refactor/cleanup
+      - name: Setup bibworld environment
+        run: | 
+          ls -ld bibworld
+          ls -ld publications
+      - name: Generate HTML for publications
+
   # Build job
   build:
     runs-on: ubuntu-latest
