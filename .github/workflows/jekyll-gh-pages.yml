@@ -48,7 +48,7 @@ jobs:
         run: |
           ls -l
           python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../_includes/all_publications.html -p ../   
-          python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../_includes/selected_publications.html -p ../ --query ../query/selectedpub-query.json
+          python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../_includes/selected_publications.html -p ../ --query ../queries/selectedpub-query.json
       - name: Cleanup helper tools
         run: |
           pwd
