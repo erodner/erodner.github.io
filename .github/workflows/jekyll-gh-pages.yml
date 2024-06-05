@@ -26,21 +26,25 @@ jobs:
   pubgen:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Clone publications
         uses: GuillaumeFalourd/clone-github-repo-action@v2.3
         with:
           owner: erodner
-          repository: publications
+          repository: 'publications'
       - name: Clone bibworld
         uses: GuillaumeFalourd/clone-github-repo-action@v2.3
         with:
-          owner: erodner
-          repository: bibworld
-          branch: refactor/cleanup
+          owner: 'erodner'
+          repository: 'bibworld'
+          branch: 'refactor/cleanup'
       - name: Setup bibworld environment
         run: | 
-          ls -ld bibworld
-          ls -ld publications
+          ls -l
+          cd bibworld
+          pip install -r requirements.txt
+          python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../publications.html -p ../webpage/
       - name: Generate HTML for publications
         run: |
           python --version
@@ -48,9 +52,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    needs: pubgen
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
