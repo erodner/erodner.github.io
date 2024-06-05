@@ -2,4 +2,5 @@
 _site
 .bundle
 Gemfile.lock
-publications.html
+_includes/selected_publications.html
+_includes/all_publications.html
