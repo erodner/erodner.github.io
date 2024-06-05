@@ -43,11 +43,11 @@ jobs:
         run: | 
           ls -l
           cd bibworld
-          pip install -r requirements.txt
-          python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../publications.html -p ../webpage/
+          pip install -r requirements.txt          
       - name: Generate HTML for publications
         run: |
-          python --version
+          python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../publications.html -p ../   
+          cd ..
 
   # Build job
   build:
