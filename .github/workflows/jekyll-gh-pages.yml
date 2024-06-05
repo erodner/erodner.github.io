@@ -40,14 +40,14 @@ jobs:
           repository: 'bibworld'
           branch: 'refactor/cleanup'
       - name: Setup bibworld environment
+        working-directory: ./bibworld
         run: | 
-          ls -l
-          cd bibworld
           pip install -r requirements.txt          
       - name: Generate HTML for publications
+        working-directory: ./bibworld
         run: |
+          ls -l
           python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../publications.html -p ../   
-          cd ..
 
   # Build job
   build:
