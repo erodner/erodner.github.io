@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   # Generating publications
-  pubgen:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -48,24 +48,18 @@ jobs:
         run: |
           ls -l
           python bib2template.py -b ../publications/paper.bib -t templates/eriks_page/erikslist-without-header.html -o ../publications.html -p ../   
-      - name: Cleanup
+      - name: Cleanup helper tools
         run: |
           pwd
           ls -l
           rm -rf bibworld
           rm -rf publications
-
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    needs: pubgen
-    steps:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./webpage
+          source: ./
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
